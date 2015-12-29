@@ -17,7 +17,7 @@
         <RelativeLayout
             android:background="#fff"
             android:layout_width="match_parent"
-            android:layout_height="270dp"
+            android:layout_height="260dp"
             android:padding="5dp">
 
             <FrameLayout
@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:text="Image Here"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="20dp"
                     android:textSize="25sp"
                     android:textColor="#000"
                     android:id="@+id/card_title"
@@ -54,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:weightSum="12"
+                android:layout_marginBottom="5dp"
                 android:layout_below="@+id/imageView"
                 android:layout_marginTop="5dp"
                 android:layout_alignParentRight="true"
@@ -63,7 +64,7 @@
                     android:id="@+id/like"
                     android:layout_width="80dp"
                     android:layout_height="70dp"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:layout_weight="4"
                     android:paddingLeft="20dp"
                     android:background="@null"
@@ -73,7 +74,7 @@
                     android:id="@+id/bookmark"
                     android:layout_width="100dp"
                     android:layout_height="70dp"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:paddingLeft="10dp"
                     android:layout_weight="4"
                     android:layout_marginLeft="30dp"
@@ -85,7 +86,7 @@
                     android:layout_width="80dp"
                     android:layout_height="70dp"
                     android:paddingRight="20dp"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:layout_marginLeft="40dp"
                     android:layout_weight="4"
                     android:background="@null"

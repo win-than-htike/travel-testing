@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.myanmarplus.travelguide.R;
 import com.myanmarplus.travelguide.model.Cinema;
+import com.myanmarplus.travelguide.model.Restaurant;
 
 import java.util.Collections;
 import java.util.List;
@@ -18,33 +19,33 @@ import java.util.List;
 /**
  * Created by winthanhtike on 12/29/15.
  */
-public class CinemaRvAdapter extends RecyclerView.Adapter<CinemaRvAdapter.CinemaViewHolder> {
+public class RestaurantRvAdapter extends RecyclerView.Adapter<RestaurantRvAdapter.RestaurantViewHolder> {
 
     LayoutInflater inflater;
     Context context;
-    List<Cinema> cList = Collections.emptyList();
+    List<Restaurant> rList = Collections.emptyList();
     private boolean like = false;
     private boolean bookmarkIcon = false;
 
-    public CinemaRvAdapter(Context context, List<Cinema> cList) {
+    public RestaurantRvAdapter(Context context, List<Restaurant> rList) {
         this.context = context;
-        this.cList = cList;
+        this.rList = rList;
         notifyDataSetChanged();
         inflater = LayoutInflater.from(context);
     }
 
     @Override
-    public CinemaViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RestaurantViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = inflater.inflate(R.layout.card_item, parent, false);
-        CinemaViewHolder viewHolder = new CinemaViewHolder(v);
+        RestaurantViewHolder viewHolder = new RestaurantViewHolder(v);
         return viewHolder;
     }
 
 
     @Override
-    public void onBindViewHolder(final CinemaViewHolder holder, int position) {
+    public void onBindViewHolder(final RestaurantViewHolder holder, int position) {
 
-        Cinema item = cList.get(position);
+        Restaurant item = rList.get(position);
         holder.image.setImageResource(item.getImageId());
         holder.imageTitle.setText(item.getTitle());
         holder.like.setOnClickListener(new View.OnClickListener() {
@@ -80,17 +81,17 @@ public class CinemaRvAdapter extends RecyclerView.Adapter<CinemaRvAdapter.Cinema
 
     @Override
     public int getItemCount() {
-        return cList.size();
+        return rList.size();
     }
 
-    public class CinemaViewHolder extends RecyclerView.ViewHolder{
+    public class RestaurantViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView image;
         private ImageView like, bookmark, share;
         private TextView imageTitle;
         CardView cardView;
 
-        public CinemaViewHolder(View itemView) {
+        public RestaurantViewHolder(View itemView) {
             super(itemView);
 
             like = (ImageView) itemView.findViewById(R.id.like);
@@ -102,4 +103,5 @@ public class CinemaRvAdapter extends RecyclerView.Adapter<CinemaRvAdapter.Cinema
 
         }
     }
+
 }

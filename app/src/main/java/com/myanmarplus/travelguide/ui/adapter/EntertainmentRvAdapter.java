@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.myanmarplus.travelguide.R;
 import com.myanmarplus.travelguide.model.Cinema;
+import com.myanmarplus.travelguide.model.Entertainment;
 
 import java.util.Collections;
 import java.util.List;
@@ -18,33 +19,33 @@ import java.util.List;
 /**
  * Created by winthanhtike on 12/29/15.
  */
-public class CinemaRvAdapter extends RecyclerView.Adapter<CinemaRvAdapter.CinemaViewHolder> {
+public class EntertainmentRvAdapter extends RecyclerView.Adapter<EntertainmentRvAdapter.EntertainmentViewHolder>{
 
     LayoutInflater inflater;
     Context context;
-    List<Cinema> cList = Collections.emptyList();
+    List<Entertainment> eList = Collections.emptyList();
     private boolean like = false;
     private boolean bookmarkIcon = false;
 
-    public CinemaRvAdapter(Context context, List<Cinema> cList) {
+    public EntertainmentRvAdapter(Context context, List<Entertainment> eList) {
         this.context = context;
-        this.cList = cList;
+        this.eList = eList;
         notifyDataSetChanged();
         inflater = LayoutInflater.from(context);
     }
 
     @Override
-    public CinemaViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public EntertainmentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = inflater.inflate(R.layout.card_item, parent, false);
-        CinemaViewHolder viewHolder = new CinemaViewHolder(v);
+        EntertainmentViewHolder viewHolder = new EntertainmentViewHolder(v);
         return viewHolder;
     }
 
 
     @Override
-    public void onBindViewHolder(final CinemaViewHolder holder, int position) {
+    public void onBindViewHolder(final EntertainmentViewHolder holder, int position) {
 
-        Cinema item = cList.get(position);
+        Entertainment item = eList.get(position);
         holder.image.setImageResource(item.getImageId());
         holder.imageTitle.setText(item.getTitle());
         holder.like.setOnClickListener(new View.OnClickListener() {
@@ -80,17 +81,17 @@ public class CinemaRvAdapter extends RecyclerView.Adapter<CinemaRvAdapter.Cinema
 
     @Override
     public int getItemCount() {
-        return cList.size();
+        return eList.size();
     }
 
-    public class CinemaViewHolder extends RecyclerView.ViewHolder{
+    public class EntertainmentViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView image;
         private ImageView like, bookmark, share;
         private TextView imageTitle;
         CardView cardView;
 
-        public CinemaViewHolder(View itemView) {
+        public EntertainmentViewHolder(View itemView) {
             super(itemView);
 
             like = (ImageView) itemView.findViewById(R.id.like);
@@ -102,4 +103,5 @@ public class CinemaRvAdapter extends RecyclerView.Adapter<CinemaRvAdapter.Cinema
 
         }
     }
+
 }
