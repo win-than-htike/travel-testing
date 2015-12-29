@@ -1,6 +1,7 @@
 package com.myanmarplus.travelguide.ui.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,9 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.myanmarplus.travelguide.R;
 import com.myanmarplus.travelguide.model.Pagoda;
+import com.myanmarplus.travelguide.ui.activity.ShweDagonPagodaActivity;
 
 import java.util.Collections;
 import java.util.List;
@@ -47,6 +50,17 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
         Pagoda item = pList.get(position);
         holder.image.setImageResource(item.getImageId());
         holder.imageTitle.setText(item.getTitle());
+        holder.setClickListener(new ItemClickListener() {
+            @Override
+            public void onClick(View view, int position, boolean isLongClick) {
+                switch (position){
+
+                    case 0:
+                        context.startActivity(new Intent(context,ShweDagonPagodaActivity.class));
+
+                }
+            }
+        });
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,11 +97,12 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
         return pList.size();
     }
 
-    public class PagodaViewHolder extends RecyclerView.ViewHolder{
+    public class PagodaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private ImageView image;
         private ImageView like, bookmark, share;
         private TextView imageTitle;
+        private ItemClickListener clickListener;
         CardView cardView;
 
         public PagodaViewHolder(View itemView) {
@@ -99,7 +114,19 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
             cardView = (CardView) itemView.findViewById(R.id.card_view);
             image = (ImageView) itemView.findViewById(R.id.card_image);
             imageTitle = (TextView) itemView.findViewById(R.id.card_title);
+            itemView.setOnClickListener(this);
 
+        }
+
+        public void setClickListener(ItemClickListener itemClickListener){
+
+            this.clickListener = itemClickListener;
+
+        }
+
+        @Override
+        public void onClick(View view) {
+            clickListener.onClick(view, getAdapterPosition(),false);
         }
     }
 
