@@ -12,7 +12,10 @@ import android.widget.TextView;
 
 import com.myanmarplus.travelguide.R;
 import com.myanmarplus.travelguide.model.NavigationItem;
+import com.myanmarplus.travelguide.ui.activity.CinemaActivity;
+import com.myanmarplus.travelguide.ui.activity.EntertainmentActivity;
 import com.myanmarplus.travelguide.ui.activity.PagodaActivity;
+import com.myanmarplus.travelguide.ui.activity.RestaurantActivity;
 
 import java.util.Collections;
 import java.util.List;
@@ -52,6 +55,19 @@ public class NavRecyclerAdapter extends RecyclerView.Adapter<NavRecyclerAdapter.
 
                     case 0:
                         context.startActivity(new Intent(context, PagodaActivity.class));
+                        break;
+
+                    case 1:
+                        context.startActivity(new Intent(context, CinemaActivity.class));
+                        break;
+
+                    case 2:
+                        context.startActivity(new Intent(context, EntertainmentActivity.class));
+                        break;
+
+                    case 3:
+                        context.startActivity(new Intent(context, RestaurantActivity.class));
+                        break;
 
                 }
             }
