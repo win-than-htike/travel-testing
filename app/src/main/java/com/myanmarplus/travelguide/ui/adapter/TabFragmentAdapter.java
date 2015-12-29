@@ -4,9 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.myanmarplus.travelguide.ui.activity.CinemaFragment;
-import com.myanmarplus.travelguide.ui.activity.EntertainmentFragment;
-import com.myanmarplus.travelguide.ui.activity.RestaurantFragment;
+import com.myanmarplus.travelguide.ui.fragment.CinemaFragment;
+import com.myanmarplus.travelguide.ui.fragment.EntertainmentFragment;
+import com.myanmarplus.travelguide.ui.fragment.RestaurantFragment;
 import com.myanmarplus.travelguide.ui.fragment.PagodaFragment;
 
 /**

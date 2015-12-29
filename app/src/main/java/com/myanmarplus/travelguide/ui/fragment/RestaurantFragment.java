@@ -1,4 +1,4 @@
-package com.myanmarplus.travelguide.ui.activity;
+package com.myanmarplus.travelguide.ui.fragment;
 
 
 import android.os.Bundle;
@@ -16,14 +16,11 @@ public class RestaurantFragment extends Fragment {
 
 
     public RestaurantFragment() {
-        // Required empty public constructor
     }
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_restaurant, container, false);
     }
 
