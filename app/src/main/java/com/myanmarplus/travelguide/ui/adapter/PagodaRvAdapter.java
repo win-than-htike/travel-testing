@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.myanmarplus.travelguide.R;
 import com.myanmarplus.travelguide.model.Pagoda;
+import com.myanmarplus.travelguide.ui.activity.KyaiktiyoActivity;
 import com.myanmarplus.travelguide.ui.activity.ShweDagonPagodaActivity;
 
 import java.util.Collections;
@@ -49,7 +50,6 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
 
         Pagoda item = pList.get(position);
         holder.image.setImageResource(item.getImageId());
-        holder.imageTitle.setText(item.getTitle());
         holder.setClickListener(new ItemClickListener() {
             @Override
             public void onClick(View view, int position, boolean isLongClick) {
@@ -57,6 +57,11 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
 
                     case 0:
                         context.startActivity(new Intent(context,ShweDagonPagodaActivity.class));
+                        break;
+
+                    case 1:
+                        context.startActivity(new Intent(context, KyaiktiyoActivity.class));
+                        break;
 
                 }
             }
@@ -101,7 +106,6 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
 
         private ImageView image;
         private ImageView like, bookmark, share;
-        private TextView imageTitle;
         private ItemClickListener clickListener;
         CardView cardView;
 
@@ -113,7 +117,6 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
             share = (ImageView) itemView.findViewById(R.id.share);
             cardView = (CardView) itemView.findViewById(R.id.card_view);
             image = (ImageView) itemView.findViewById(R.id.card_image);
-            imageTitle = (TextView) itemView.findViewById(R.id.card_title);
             itemView.setOnClickListener(this);
 
         }

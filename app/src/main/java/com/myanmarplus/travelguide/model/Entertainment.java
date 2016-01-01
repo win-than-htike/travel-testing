@@ -6,7 +6,6 @@ package com.myanmarplus.travelguide.model;
 public class Entertainment {
 
     int imageId;
-    String title;
 
     public int getImageId() {
         return imageId;
@@ -16,12 +15,5 @@ public class Entertainment {
         this.imageId = imageId;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
 }

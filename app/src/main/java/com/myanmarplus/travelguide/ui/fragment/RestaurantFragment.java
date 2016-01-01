@@ -46,12 +46,10 @@ public class RestaurantFragment extends Fragment {
         List<Restaurant> itemList = new ArrayList<>();
 
         int[] imageId = {R.drawable.google,R.drawable.google,R.drawable.google,R.drawable.google};
-        String[] title = {"Google","Facebook","Youtube","Bing"};
 
         for (int i = 0; i < imageId.length; i++){
 
             Restaurant item = new Restaurant();
-            item.setTitle(title[i]);
             item.setImageId(imageId[i]);
             itemList.add(item);
 

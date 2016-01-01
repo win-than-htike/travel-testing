@@ -43,12 +43,10 @@ public class CinemaFragment extends Fragment {
         List<Cinema> itemList = new ArrayList<>();
 
         int[] imageId = {R.drawable.google,R.drawable.google,R.drawable.google,R.drawable.google};
-        String[] title = {"Google","Facebook","Youtube","Bing"};
 
         for (int i = 0; i < imageId.length; i++){
 
             Cinema item = new Cinema();
-            item.setTitle(title[i]);
             item.setImageId(imageId[i]);
             itemList.add(item);
         }

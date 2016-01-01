@@ -47,7 +47,6 @@ public class EntertainmentRvAdapter extends RecyclerView.Adapter<EntertainmentRv
 
         Entertainment item = eList.get(position);
         holder.image.setImageResource(item.getImageId());
-        holder.imageTitle.setText(item.getTitle());
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,7 +87,6 @@ public class EntertainmentRvAdapter extends RecyclerView.Adapter<EntertainmentRv
 
         private ImageView image;
         private ImageView like, bookmark, share;
-        private TextView imageTitle;
         CardView cardView;
 
         public EntertainmentViewHolder(View itemView) {
@@ -99,7 +97,6 @@ public class EntertainmentRvAdapter extends RecyclerView.Adapter<EntertainmentRv
             share = (ImageView) itemView.findViewById(R.id.share);
             cardView = (CardView) itemView.findViewById(R.id.card_view);
             image = (ImageView) itemView.findViewById(R.id.card_image);
-            imageTitle = (TextView) itemView.findViewById(R.id.card_title);
 
         }
     }

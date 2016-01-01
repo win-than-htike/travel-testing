@@ -47,7 +47,6 @@ public class RestaurantRvAdapter extends RecyclerView.Adapter<RestaurantRvAdapte
 
         Restaurant item = rList.get(position);
         holder.image.setImageResource(item.getImageId());
-        holder.imageTitle.setText(item.getTitle());
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,7 +98,6 @@ public class RestaurantRvAdapter extends RecyclerView.Adapter<RestaurantRvAdapte
             share = (ImageView) itemView.findViewById(R.id.share);
             cardView = (CardView) itemView.findViewById(R.id.card_view);
             image = (ImageView) itemView.findViewById(R.id.card_image);
-            imageTitle = (TextView) itemView.findViewById(R.id.card_title);
 
         }
     }

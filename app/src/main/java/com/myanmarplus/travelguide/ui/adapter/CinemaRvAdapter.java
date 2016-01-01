@@ -46,7 +46,6 @@ public class CinemaRvAdapter extends RecyclerView.Adapter<CinemaRvAdapter.Cinema
 
         Cinema item = cList.get(position);
         holder.image.setImageResource(item.getImageId());
-        holder.imageTitle.setText(item.getTitle());
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,7 +86,6 @@ public class CinemaRvAdapter extends RecyclerView.Adapter<CinemaRvAdapter.Cinema
 
         private ImageView image;
         private ImageView like, bookmark, share;
-        private TextView imageTitle;
         CardView cardView;
 
         public CinemaViewHolder(View itemView) {
@@ -98,7 +96,6 @@ public class CinemaRvAdapter extends RecyclerView.Adapter<CinemaRvAdapter.Cinema
             share = (ImageView) itemView.findViewById(R.id.share);
             cardView = (CardView) itemView.findViewById(R.id.card_view);
             image = (ImageView) itemView.findViewById(R.id.card_image);
-            imageTitle = (TextView) itemView.findViewById(R.id.card_title);
 
         }
     }

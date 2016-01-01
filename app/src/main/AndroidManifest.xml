@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".ui.activity.PagodaActivity"/>
         <activity android:name=".ui.activity.ShweDagonPagodaActivity"/>
+        <activity android:name=".ui.activity.KyaiktiyoActivity"/>
     </application>
 
 </manifest>

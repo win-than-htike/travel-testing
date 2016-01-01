@@ -44,13 +44,11 @@ public class PagodaFragment extends Fragment {
 
         List<Pagoda> itemList = new ArrayList<>();
 
-        int[] imageId = {R.drawable.google,R.drawable.google,R.drawable.google,R.drawable.google};
-        String[] title = {"Google","Facebook","Youtube","Bing"};
+        int[] imageId = {R.drawable.shwedagon,R.drawable.kyaiktiyo,R.drawable.google,R.drawable.google};
 
         for (int i = 0; i < imageId.length; i++){
 
             Pagoda item = new Pagoda();
-            item.setTitle(title[i]);
             item.setImageId(imageId[i]);
             itemList.add(item);
         }
