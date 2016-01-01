@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.PagodaActivity"/>
+        <activity android:name=".ui.activity.ShweDagonPagodaActivity"/>
     </application>
 
 </manifest>
