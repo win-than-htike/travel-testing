@@ -29,10 +29,10 @@ public class CinemaFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_cinema, container, false);
-        rv_cinema = (RecyclerView)v.findViewById(R.id.rv_cinema);
-        cinemaRvAdapter = new CinemaRvAdapter(getActivity(),getData());
+        rv_cinema = (RecyclerView) v.findViewById(R.id.rv_cinema);
+        cinemaRvAdapter = new CinemaRvAdapter(getActivity(), getData());
         rv_cinema.setAdapter(cinemaRvAdapter);
         rv_cinema.setLayoutManager(new LinearLayoutManager(getActivity()));
         return v;
@@ -42,9 +42,9 @@ public class CinemaFragment extends Fragment {
 
         List<Cinema> itemList = new ArrayList<>();
 
-        int[] imageId = {R.drawable.google,R.drawable.google,R.drawable.google,R.drawable.google};
+        int[] imageId = {R.drawable.google, R.drawable.google, R.drawable.google, R.drawable.google};
 
-        for (int i = 0; i < imageId.length; i++){
+        for (int i = 0; i < imageId.length; i++) {
 
             Cinema item = new Cinema();
             item.setImageId(imageId[i]);

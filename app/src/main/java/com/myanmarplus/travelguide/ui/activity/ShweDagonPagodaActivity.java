@@ -10,7 +10,7 @@ import com.myanmarplus.travelguide.R;
 /**
  * Created by winthanhtike on 12/29/15.
  */
-public class ShweDagonPagodaActivity extends AppCompatActivity{
+public class ShweDagonPagodaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

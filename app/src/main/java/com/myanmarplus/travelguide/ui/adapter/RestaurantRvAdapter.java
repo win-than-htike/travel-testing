@@ -50,10 +50,10 @@ public class RestaurantRvAdapter extends RecyclerView.Adapter<RestaurantRvAdapte
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (like == true){
+                if (like == true) {
                     holder.like.setImageResource(R.drawable.like_press);
                     like = false;
-                }else if (like == false){
+                } else if (like == false) {
 
                     holder.like.setImageResource(R.drawable.favorite);
                     like = true;
@@ -65,10 +65,10 @@ public class RestaurantRvAdapter extends RecyclerView.Adapter<RestaurantRvAdapte
         holder.bookmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (bookmarkIcon == false){
+                if (bookmarkIcon == false) {
                     holder.bookmark.setImageResource(R.drawable.bookmark);
                     bookmarkIcon = true;
-                }else if (bookmarkIcon == true){
+                } else if (bookmarkIcon == true) {
                     holder.bookmark.setImageResource(R.drawable.bookmark_press);
                     bookmarkIcon = false;
                 }
@@ -83,7 +83,7 @@ public class RestaurantRvAdapter extends RecyclerView.Adapter<RestaurantRvAdapte
         return rList.size();
     }
 
-    public class RestaurantViewHolder extends RecyclerView.ViewHolder{
+    public class RestaurantViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView image;
         private ImageView like, bookmark, share;

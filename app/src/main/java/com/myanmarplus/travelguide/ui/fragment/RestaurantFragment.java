@@ -32,10 +32,10 @@ public class RestaurantFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_cinema, container, false);
-        rv_restaurant = (RecyclerView)v.findViewById(R.id.rv_cinema);
-        restaurantRvAdapter = new RestaurantRvAdapter(getActivity(),getData());
+        rv_restaurant = (RecyclerView) v.findViewById(R.id.rv_cinema);
+        restaurantRvAdapter = new RestaurantRvAdapter(getActivity(), getData());
         rv_restaurant.setAdapter(restaurantRvAdapter);
         rv_restaurant.setLayoutManager(new LinearLayoutManager(getActivity()));
         return v;
@@ -45,9 +45,9 @@ public class RestaurantFragment extends Fragment {
 
         List<Restaurant> itemList = new ArrayList<>();
 
-        int[] imageId = {R.drawable.google,R.drawable.google,R.drawable.google,R.drawable.google};
+        int[] imageId = {R.drawable.google, R.drawable.google, R.drawable.google, R.drawable.google};
 
-        for (int i = 0; i < imageId.length; i++){
+        for (int i = 0; i < imageId.length; i++) {
 
             Restaurant item = new Restaurant();
             item.setImageId(imageId[i]);

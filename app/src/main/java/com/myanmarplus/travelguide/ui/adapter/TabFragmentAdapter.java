@@ -39,7 +39,8 @@ public class TabFragmentAdapter extends FragmentStatePagerAdapter {
                 RestaurantFragment rfg = new RestaurantFragment();
                 return rfg;
 
-            default:return null;
+            default:
+                return null;
         }
     }
 

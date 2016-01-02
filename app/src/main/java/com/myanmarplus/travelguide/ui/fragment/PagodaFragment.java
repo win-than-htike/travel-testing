@@ -30,10 +30,10 @@ public class PagodaFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-        View v =inflater.inflate(R.layout.fragment_pagoda, container, false);
-        rv_pagoda = (RecyclerView)v.findViewById(R.id.rv_pagoda);
-        pagodaRvAdapter = new PagodaRvAdapter(getActivity(),getData());
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_pagoda, container, false);
+        rv_pagoda = (RecyclerView) v.findViewById(R.id.rv_pagoda);
+        pagodaRvAdapter = new PagodaRvAdapter(getActivity(), getData());
         rv_pagoda.setAdapter(pagodaRvAdapter);
         rv_pagoda.setLayoutManager(new LinearLayoutManager(getActivity()));
         return v;
@@ -44,9 +44,9 @@ public class PagodaFragment extends Fragment {
 
         List<Pagoda> itemList = new ArrayList<>();
 
-        int[] imageId = {R.drawable.shwedagon,R.drawable.kyaiktiyo,R.drawable.google,R.drawable.google};
+        int[] imageId = {R.drawable.shwedagon, R.drawable.kyaiktiyo, R.drawable.shwezigon, R.drawable.google};
 
-        for (int i = 0; i < imageId.length; i++){
+        for (int i = 0; i < imageId.length; i++) {
 
             Pagoda item = new Pagoda();
             item.setImageId(imageId[i]);

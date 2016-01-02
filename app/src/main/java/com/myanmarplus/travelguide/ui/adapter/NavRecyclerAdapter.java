@@ -37,7 +37,7 @@ public class NavRecyclerAdapter extends RecyclerView.Adapter<NavRecyclerAdapter.
 
     @Override
     public NavViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = inflater.inflate(R.layout.drawer_list_item,parent,false);
+        View v = inflater.inflate(R.layout.drawer_list_item, parent, false);
         NavViewHolder holder = new NavViewHolder(v);
         return holder;
     }
@@ -51,7 +51,7 @@ public class NavRecyclerAdapter extends RecyclerView.Adapter<NavRecyclerAdapter.
         holder.rvLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switch (position){
+                switch (position) {
 
                     case 0:
                         context.startActivity(new Intent(context, PagodaActivity.class));
@@ -90,9 +90,9 @@ public class NavRecyclerAdapter extends RecyclerView.Adapter<NavRecyclerAdapter.
         public NavViewHolder(View itemView) {
             super(itemView);
 
-            rvLayout = (RelativeLayout)itemView.findViewById(R.id.rv_layout);
-            icon = (ImageView)itemView.findViewById(R.id.icon);
-            title = (TextView)itemView.findViewById(R.id.title);
+            rvLayout = (RelativeLayout) itemView.findViewById(R.id.rv_layout);
+            icon = (ImageView) itemView.findViewById(R.id.icon);
+            title = (TextView) itemView.findViewById(R.id.title);
 
         }
     }

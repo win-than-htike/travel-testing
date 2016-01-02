@@ -32,10 +32,10 @@ public class EntertainmentFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_entertainment, container, false);
-        rv_entertainment = (RecyclerView)v.findViewById(R.id.rv_entertainment);
-        entertainmentRvAdapter = new EntertainmentRvAdapter(getActivity(),getData());
+        rv_entertainment = (RecyclerView) v.findViewById(R.id.rv_entertainment);
+        entertainmentRvAdapter = new EntertainmentRvAdapter(getActivity(), getData());
         rv_entertainment.setAdapter(entertainmentRvAdapter);
         rv_entertainment.setLayoutManager(new LinearLayoutManager(getActivity()));
         return v;
@@ -45,9 +45,9 @@ public class EntertainmentFragment extends Fragment {
 
         List<Entertainment> itemList = new ArrayList<>();
 
-        int[] imageId = {R.drawable.google,R.drawable.google,R.drawable.google,R.drawable.google};
+        int[] imageId = {R.drawable.google, R.drawable.google, R.drawable.google, R.drawable.google};
 
-        for (int i = 0; i < imageId.length; i++){
+        for (int i = 0; i < imageId.length; i++) {
 
             Entertainment item = new Entertainment();
             item.setImageId(imageId[i]);

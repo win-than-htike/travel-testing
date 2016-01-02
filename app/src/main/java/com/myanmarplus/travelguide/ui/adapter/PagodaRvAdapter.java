@@ -15,6 +15,7 @@ import com.myanmarplus.travelguide.R;
 import com.myanmarplus.travelguide.model.Pagoda;
 import com.myanmarplus.travelguide.ui.activity.KyaiktiyoActivity;
 import com.myanmarplus.travelguide.ui.activity.ShweDagonPagodaActivity;
+import com.myanmarplus.travelguide.ui.activity.ShwezigonActivity;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,7 +23,7 @@ import java.util.List;
 /**
  * Created by winthanhtike on 12/29/15.
  */
-public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.PagodaViewHolder>{
+public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.PagodaViewHolder> {
 
     LayoutInflater inflater;
     Context context;
@@ -53,14 +54,18 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
         holder.setClickListener(new ItemClickListener() {
             @Override
             public void onClick(View view, int position, boolean isLongClick) {
-                switch (position){
+                switch (position) {
 
                     case 0:
-                        context.startActivity(new Intent(context,ShweDagonPagodaActivity.class));
+                        context.startActivity(new Intent(context, ShweDagonPagodaActivity.class));
                         break;
 
                     case 1:
                         context.startActivity(new Intent(context, KyaiktiyoActivity.class));
+                        break;
+
+                    case 2:
+                        context.startActivity(new Intent(context, ShwezigonActivity.class));
                         break;
 
                 }
@@ -69,10 +74,10 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (like == true){
+                if (like == true) {
                     holder.like.setImageResource(R.drawable.like_press);
                     like = false;
-                }else if (like == false){
+                } else if (like == false) {
 
                     holder.like.setImageResource(R.drawable.favorite);
                     like = true;
@@ -84,10 +89,10 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
         holder.bookmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (bookmarkIcon == false){
+                if (bookmarkIcon == false) {
                     holder.bookmark.setImageResource(R.drawable.bookmark);
                     bookmarkIcon = true;
-                }else if (bookmarkIcon == true){
+                } else if (bookmarkIcon == true) {
                     holder.bookmark.setImageResource(R.drawable.bookmark_press);
                     bookmarkIcon = false;
                 }
@@ -112,7 +117,7 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
         public PagodaViewHolder(View itemView) {
             super(itemView);
 
-            like=(ImageView)itemView.findViewById(R.id.like);
+            like = (ImageView) itemView.findViewById(R.id.like);
             bookmark = (ImageView) itemView.findViewById(R.id.bookmark);
             share = (ImageView) itemView.findViewById(R.id.share);
             cardView = (CardView) itemView.findViewById(R.id.card_view);
@@ -121,7 +126,7 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
 
         }
 
-        public void setClickListener(ItemClickListener itemClickListener){
+        public void setClickListener(ItemClickListener itemClickListener) {
 
             this.clickListener = itemClickListener;
 
@@ -129,7 +134,7 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
 
         @Override
         public void onClick(View view) {
-            clickListener.onClick(view, getAdapterPosition(),false);
+            clickListener.onClick(view, getAdapterPosition(), false);
         }
     }
 

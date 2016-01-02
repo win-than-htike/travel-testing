@@ -27,15 +27,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = (Toolbar)findViewById(R.id.toolbar);
-        toolbar.setTitle("Travel");
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Travel Guide");
+        toolbar.setTitleTextColor(R.color.toolbarTextcolor);
 
 //        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
 //        drawerListLayout = (RelativeLayout)findViewById(R.id.nav_drawer);
-        mDrawerFragment = (DrawerFragment)getSupportFragmentManager().findFragmentById(R.id.fragment);
-        mDrawerFragment.setUp((DrawerLayout)findViewById(R.id.drawer_layout),toolbar);
+        mDrawerFragment = (DrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
+        mDrawerFragment.setUp((DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
 
-        TabLayout mTabLayout = (TabLayout)findViewById(R.id.tab_layout);
+        TabLayout mTabLayout = (TabLayout) findViewById(R.id.tab_layout);
         mTabLayout.addTab(mTabLayout.newTab().setIcon(R.drawable.pagoda));
         mTabLayout.addTab(mTabLayout.newTab().setIcon(R.drawable.cinema));
         mTabLayout.addTab(mTabLayout.newTab().setIcon(R.drawable.entertainment));
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         mTabFragmentAdapter = new TabFragmentAdapter(getSupportFragmentManager());
-        mViewPager = (ViewPager)findViewById(R.id.pager);
+        mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mTabFragmentAdapter);
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
         mTabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

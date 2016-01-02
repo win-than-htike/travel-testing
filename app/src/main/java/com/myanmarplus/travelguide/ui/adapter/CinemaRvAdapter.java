@@ -49,10 +49,10 @@ public class CinemaRvAdapter extends RecyclerView.Adapter<CinemaRvAdapter.Cinema
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (like == true){
+                if (like == true) {
                     holder.like.setImageResource(R.drawable.like_press);
                     like = false;
-                }else if (like == false){
+                } else if (like == false) {
 
                     holder.like.setImageResource(R.drawable.favorite);
                     like = true;
@@ -64,10 +64,10 @@ public class CinemaRvAdapter extends RecyclerView.Adapter<CinemaRvAdapter.Cinema
         holder.bookmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (bookmarkIcon == false){
+                if (bookmarkIcon == false) {
                     holder.bookmark.setImageResource(R.drawable.bookmark);
                     bookmarkIcon = true;
-                }else if (bookmarkIcon == true){
+                } else if (bookmarkIcon == true) {
                     holder.bookmark.setImageResource(R.drawable.bookmark_press);
                     bookmarkIcon = false;
                 }
@@ -82,7 +82,7 @@ public class CinemaRvAdapter extends RecyclerView.Adapter<CinemaRvAdapter.Cinema
         return cList.size();
     }
 
-    public class CinemaViewHolder extends RecyclerView.ViewHolder{
+    public class CinemaViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView image;
         private ImageView like, bookmark, share;

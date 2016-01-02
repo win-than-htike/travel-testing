@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Created by winthanhtike on 12/28/15.
  */
-public class DrawerFragment extends Fragment{
+public class DrawerFragment extends Fragment {
 
     private DrawerLayout mDrawerLayot;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -32,9 +32,9 @@ public class DrawerFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.drawer_list_layout,container,false);
-        drawerRecycler = (RecyclerView)v.findViewById(R.id.drawer_list);
-        navAdapter = new NavRecyclerAdapter(getActivity(),getData());
+        View v = inflater.inflate(R.layout.drawer_list_layout, container, false);
+        drawerRecycler = (RecyclerView) v.findViewById(R.id.drawer_list);
+        navAdapter = new NavRecyclerAdapter(getActivity(), getData());
         drawerRecycler.setAdapter(navAdapter);
         drawerRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         return v;
@@ -44,10 +44,10 @@ public class DrawerFragment extends Fragment{
 
         List<NavigationItem> navList = new ArrayList<>();
 
-        int[] iconId = {R.drawable.pagoda,R.drawable.cinema,R.drawable.entertainment,R.drawable.restaurant};
-        String[] title = {"Pagoda","Cinema","Entertainment","Restuarant"};
+        int[] iconId = {R.drawable.pagoda, R.drawable.cinema, R.drawable.entertainment, R.drawable.restaurant};
+        String[] title = {"Pagoda", "Cinema", "Entertainment", "Restuarant"};
 
-        for (int i = 0; i < iconId.length; i++){
+        for (int i = 0; i < iconId.length; i++) {
 
             NavigationItem item = new NavigationItem();
             item.setIconId(iconId[i]);
@@ -61,10 +61,10 @@ public class DrawerFragment extends Fragment{
     }
 
 
-    public void setUp(DrawerLayout drawerLayout, Toolbar toolbar){
+    public void setUp(DrawerLayout drawerLayout, Toolbar toolbar) {
 
         mDrawerLayot = drawerLayout;
-        mDrawerToggle = new ActionBarDrawerToggle(getActivity(),mDrawerLayot,toolbar,R.string.drawer_open, R.string.drawer_close){
+        mDrawerToggle = new ActionBarDrawerToggle(getActivity(), mDrawerLayot, toolbar, R.string.drawer_open, R.string.drawer_close) {
 
             @Override
             public void onDrawerOpened(View drawerView) {
