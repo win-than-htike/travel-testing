@@ -42,7 +42,7 @@ public class CinemaFragment extends Fragment {
 
         List<Cinema> itemList = new ArrayList<>();
 
-        int[] imageId = {R.drawable.google, R.drawable.google, R.drawable.google, R.drawable.google};
+        int[] imageId = {R.drawable.cinema_js_one, R.drawable.google, R.drawable.google, R.drawable.google};
 
         for (int i = 0; i < imageId.length; i++) {
 

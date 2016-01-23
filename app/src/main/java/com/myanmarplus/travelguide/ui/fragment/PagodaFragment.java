@@ -44,7 +44,7 @@ public class PagodaFragment extends Fragment {
 
         List<Pagoda> itemList = new ArrayList<>();
 
-        int[] imageId = {R.drawable.shwedagon, R.drawable.kyaiktiyo, R.drawable.shwezigon, R.drawable.google};
+        int[] imageId = {R.drawable.shwedagon, R.drawable.kyaiktiyo, R.drawable.shwezigon, R.drawable.dhammayazika};
 
         for (int i = 0; i < imageId.length; i++) {
 

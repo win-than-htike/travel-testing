@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.myanmarplus.travelguide.R;
 import com.myanmarplus.travelguide.model.Pagoda;
+import com.myanmarplus.travelguide.ui.activity.DhammayazikaActivity;
 import com.myanmarplus.travelguide.ui.activity.KyaiktiyoActivity;
 import com.myanmarplus.travelguide.ui.activity.ShweDagonPagodaActivity;
 import com.myanmarplus.travelguide.ui.activity.ShwezigonActivity;
@@ -66,6 +67,10 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
 
                     case 2:
                         context.startActivity(new Intent(context, ShwezigonActivity.class));
+                        break;
+
+                    case 3:
+                        context.startActivity(new Intent(context, DhammayazikaActivity.class));
                         break;
 
                 }

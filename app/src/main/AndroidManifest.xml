@@ -22,6 +22,7 @@
         <activity android:name=".ui.activity.EntertainmentActivity"/>
         <activity android:name=".ui.activity.RestaurantActivity"/>
         <activity android:name=".ui.activity.ShwezigonActivity"/>
+        <activity android:name=".ui.activity.DhammayazikaActivity"/>
     </application>
 
 </manifest>
