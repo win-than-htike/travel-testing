@@ -9,15 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.myanmarplus.travelguide.R;
 import com.myanmarplus.travelguide.model.Pagoda;
-import com.myanmarplus.travelguide.ui.activity.DhammayazikaActivity;
-import com.myanmarplus.travelguide.ui.activity.KyaiktiyoActivity;
-import com.myanmarplus.travelguide.ui.activity.ShweDagonPagodaActivity;
-import com.myanmarplus.travelguide.ui.activity.ShwezigonActivity;
+import com.myanmarplus.travelguide.ui.activity.PagodaDetailActivity;
 
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 
@@ -50,30 +47,17 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
     @Override
     public void onBindViewHolder(final PagodaViewHolder holder, int position) {
 
-        Pagoda item = pList.get(position);
+        final Pagoda item = pList.get(position);
         holder.image.setImageResource(item.getImageId());
+        holder.name.setText(item.getPagodaName());
         holder.setClickListener(new ItemClickListener() {
             @Override
-            public void onClick(View view, int position, boolean isLongClick) {
-                switch (position) {
+            public void onClick(int position) {
 
-                    case 0:
-                        context.startActivity(new Intent(context, ShweDagonPagodaActivity.class));
-                        break;
+                Intent i = new Intent(context, PagodaDetailActivity.class);
+                i.putExtra("pagoda", item);
+                context.startActivity(i);
 
-                    case 1:
-                        context.startActivity(new Intent(context, KyaiktiyoActivity.class));
-                        break;
-
-                    case 2:
-                        context.startActivity(new Intent(context, ShwezigonActivity.class));
-                        break;
-
-                    case 3:
-                        context.startActivity(new Intent(context, DhammayazikaActivity.class));
-                        break;
-
-                }
             }
         });
         holder.like.setOnClickListener(new View.OnClickListener() {
@@ -115,6 +99,7 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
     public class PagodaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private ImageView image;
+        private TextView name;
         private ImageView like, bookmark, share;
         private ItemClickListener clickListener;
         CardView cardView;
@@ -126,6 +111,7 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
             bookmark = (ImageView) itemView.findViewById(R.id.bookmark);
             share = (ImageView) itemView.findViewById(R.id.share);
             cardView = (CardView) itemView.findViewById(R.id.card_view);
+            name = (TextView) itemView.findViewById(R.id.name);
             image = (ImageView) itemView.findViewById(R.id.card_image);
             itemView.setOnClickListener(this);
 
@@ -139,7 +125,7 @@ public class PagodaRvAdapter extends RecyclerView.Adapter<PagodaRvAdapter.Pagoda
 
         @Override
         public void onClick(View view) {
-            clickListener.onClick(view, getAdapterPosition(), false);
+            clickListener.onClick(getLayoutPosition());
         }
     }
 

@@ -5,8 +5,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_open">Drawer Opened!</string>
     <string name="drawer_close">Drawer Closed!</string>
+    
+    <string-array name="pagoda_desc">
 
-    <string name="shwedagon">
+        <item>
 In the capital city of Yangon, you will find the beautifully majestic Shwedagon Pagoda. The Shwedagon Pagoda sits upon holy Singuttara Hill. To understand the reason why this hill is considered so holy, and to grasp the significance of the Shwedagon to Buddhists and to the people of Myanmar, it is important to know both the history and the legends of how it all came to be.
 Over 2,500 years ago, there lived a king by the name of Okkalapa. He was ruler of Suvannabhumi and ruled over the Talaings. At this time, Siddharta Guatama was living in northern India. He was still a young man and was not yet recognized as the Buddha.
 It was and is believed that a new Buddha, or “Enlightened One”, will come into being once every 5,000 years. At the time of Okkalapa, it had been approximately 5,000 years since the last Buddha, and it was considered time once again.
@@ -14,31 +16,40 @@ Singuttara Hill is important because it was the holy resting spot of the relics 
 But Okkalapa was concerned, as a new Buddha had not come to be known yet, and if it took too long he feared the hill could lose its holiness. He went to the hill to pray and to meditate, unaware of Siddharta Guatama’s coming into enlightenment under the Bodhi tree in northern India at the same time.
 According to area legend, he appeared to Okkalapa and told him to be patient, that his wish for the hill would soon be granted.
 As Guatama was reaching the end of his 49 days of meditation, he was visited by two brothers. Their names were Tapussa and Bhallika, and they happened to be from Myanmar and were subjects of Okkalapa. These two merchant brothers present Guatama Buddha with a gift of some honey cake, as they recognized him as The Enlightened One.
-    </string>
+        </item>
 
-    <string name="kyaiktiyo">Kyaikhtiyo pagoda is located in the small town called Kyaikhto, in the Mon State. This destination is 160km away from Yangon. The pagoda is 1100km above sea-level. It is a 11 kilometer uphill climb for the hikers from Kinpun base camp. There is also a steep winding road for 4-wheel drive cars from the base to the nearest point of the pagodas. The pagoda is also known as "the golden rock". The meaning of Kyaik Hti Yo : According to Mon tradition, the name is a corruption of Kyaiki-thi-yo being derived as follows. In Mon language the word "Kyaik" means " pagoda" and " yo" " to carry on the hermits head", in Pali the word" ithi" means a hermit and therefore the name means " the pagoda carried on the hermit's head.<br/></string>
+        <item>Kyaikhtiyo pagoda is located in the small town called Kyaikhto, in the Mon State. This destination is 160km away from Yangon. The pagoda is 1100km above sea-level. It is a 11 kilometer uphill climb for the hikers from Kinpun base camp. There is also a steep winding road for 4-wheel drive cars from the base to the nearest point of the pagodas. The pagoda is also known as "the golden rock". The meaning of Kyaik Hti Yo : According to Mon tradition, the name is a corruption of Kyaiki-thi-yo being derived as follows. In Mon language the word "Kyaik" means " pagoda" and " yo" " to carry on the hermits head", in Pali the word" ithi" means a hermit and therefore the name means " the pagoda carried on the hermit's head.<br/></item>
 
-    <string name="kyaiktiyo_structure">
-        The pagoda, about 18 feet high, and 50 feet in girth. is situated on the hill of the same name on the ridge between Sittaung and Thanlwin. It is built on a huge, almost egg- shaped, rounded granitoid boulder perched on the very summit of a projecting and shelving tabular rock, which in itself is separated several feet from the mountain by a rent or chasm, now spanned by a small foot bridge of iron and on the further side drops perpendicularly into a valley blow.
-    </string>
-
-    <string name="kyaiktiyo_history">
-It is said that the boulder has been over 2500 years. The tradition is that after the hermit had obtained the hair from the Buddha, he was carrying it on his head inside his hair knot till he found a boulder which resembled his head, and so he built the pagoda on its enshrining the relic, substituting the boulder for his over head.
-On the extreme verge of this sloping rock table, and actually over hanging it by nearly half, is perched this wonderful boulder (now completely gilded with gold), thirty feet high and surrounded by the pagoda. By gently rocking the boulder a thread can be passed underneath; seemingly appears as if the additional weight of a few pounds, or a strong wind, would send it sliding down from the place it has occupied for unknown centuries watching over three thousand feet into the sloping valley beneath and we know what freakish law keeps it in its position. Anyway pious Buddhists attribute it to the power of the relic enshrined in the pagoda.
-This relic is a hair of Gotama Buddha given to a hermit residing on the mountain by the Buddha himself as he was returning from the second heaven of the Nats whither he had gone to preach the law to his mother.
-    </string>
-
-    <string name="shewzigon">
+         <item>
 There are four image houses called "Kyey Gu Taik,"each on one side of the Pagoda. In the eastern house is the statue of Konagamana Buddha, in the western house is the statue of Gotama Buddha, in the northern house is the statue of Kakusanda Buddha, and in the southern house is the statue of Kassapa Buddha. These Buddha statues were cast in alloy and heavily gilt. On either side of the eastern causeway is an inscribed stone slab recording the biography of King Kyanzittha and political,economic and cultureal conditions of the time. The inscription is composed in old Mon language.
 Originally there was an inner enclosure wall built of wooden posts and bars. There were four arched entrances in the inner enclosure wall, facing four cardinal directions. Two zedis at each entrance, big iron rings fixed on them and stone bars at the entrances survive till to day. On either side of the inner wall, leaning against the entrance zedis are two Dwarapala figures each on one side, representing the guardian deities. On either side of the arched entrance of the outer enclosure wall are a pair of Dwarapala devas figures and a pair of lion figures each sculpted out of a monolithic. On both sides of the southern arched entrance are found stone figures of ten handed deva, Naya and Lion.
 Orginally there were four Panet The Gus, each at one corner of the precinct. Now only two remain, one at the north east corner and the other at the north west corner. Panet The Gus are brick spires
 There is a large wooden doorleaf on display in the Pagoda museum. It is one of the original 8 wooden door leaves from the entrances of the inner wooden enclosure wall. Fortunately at least one door leaf survives. It is over nine centuries old. On it are carvings of musicians, dancers, floral designs, and patterns artistically executed. Another art work of Bagan period is a wooden statue of Bodaw Thagya (Sakka deva) at the shrine of 37 Nat spirits in the southeast corner.
-    </string>
+         </item>
 
-    <string name="dhammayazika">
+         <item>
 The name of the pagoda, Dhammayazika or Dhammarajika in Pali means "Pertaining the King of Law. The structure of Dhammayazika Pagoda has pentagonal terraces instead of the usual Bagan pagodas, the square base.There are three receding terraces, ornamented with glazed Jataka plaques. On each side of the pagoda, there is a small temple housing an image of Buddha. The usual practice in most temples was to have four images facing the cardinal points, representing the four Buddhas of the present world cycle who have already attained Enlightenment.
 But in this pagoda the fifth temple is placed with the future becoming Buddha. All the five names of the Buddha are Kakusandha, Konagamana, Kassapa, Gotama and Metteyya. The inscription records say tht in 1197 King Narapatisithu received four holy relics from the King of Sri Lanka and that he built the pagoda in 1198 to enshrine the relics.
-    </string>
+        </item>
+
+    </string-array>
+
+    <string-array name="pagoda_name">
+
+        <item>Shwedagon Pagoda</item>
+        <item>Kyaiktiyo Pagoda</item>
+        <item>Shwezigon Pagoda</item>
+        <item>Dhammayazika Pagoda</item>
+
+    </string-array>
+
+
+
+
+
+
+
+
 
 
 </resources>

@@ -15,14 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.PagodaActivity"/>
-        <activity android:name=".ui.activity.ShweDagonPagodaActivity"/>
-        <activity android:name=".ui.activity.KyaiktiyoActivity"/>
-        <activity android:name=".ui.activity.CinemaActivity"/>
-        <activity android:name=".ui.activity.EntertainmentActivity"/>
-        <activity android:name=".ui.activity.RestaurantActivity"/>
-        <activity android:name=".ui.activity.ShwezigonActivity"/>
-        <activity android:name=".ui.activity.DhammayazikaActivity"/>
+        <activity android:name=".ui.activity.PagodaDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
