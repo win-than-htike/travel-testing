@@ -59,7 +59,6 @@ public class PagodaDetailActivity extends AppCompatActivity{
                 String shareContent = pagoda.getPagodaDesc();
                 Intent share = new Intent(Intent.ACTION_SEND);
                 share.setType("text/plain");
-                share.setType("image/*");
                 share.putExtra(Intent.EXTRA_TEXT,shareContent);
                 share.createChooser(share,"Share Article");
                 startActivity(share);
